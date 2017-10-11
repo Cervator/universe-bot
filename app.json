@@ -1,0 +1,23 @@
+{
+  "name": "universe-bot",
+  "scripts": {
+  },
+  "env": {
+    "HUBOT_SLACK_TOKEN": {
+      "required": true
+    },
+    "INSTANCE": {
+      "generator": "secret"
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
