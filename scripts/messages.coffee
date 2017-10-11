@@ -1,6 +1,7 @@
 # Description:
 #   Basic scripts that listen for a prompt and return an associated static message
 
+  botInstance = process.env.INSTANCE or "undefined"
 
 module.exports = (robot) ->
 
@@ -21,3 +22,7 @@ module.exports = (robot) ->
 
   robot.respond /gooeyjr/gim, (res) ->
     res.send " > Gooey JR is so cool. I want to be like him one day."
+
+  robot.respond /who are you/, (res) ->
+    res.send "My model number is: #{botInstance}"
+    
