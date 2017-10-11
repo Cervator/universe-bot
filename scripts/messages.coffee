@@ -24,5 +24,5 @@ module.exports = (robot) ->
     res.send " > Gooey JR is so cool. I want to be like him one day."
 
   robot.respond /who are you/, (res) ->
-    res.send "My model number is: #{botInstance}"
+    res.send "My new model number is: #{botInstance}"
     
