@@ -1,7 +1,7 @@
 # Description:
 #   Basic scripts that listen for a prompt and return an associated static message
 
-  botInstance = process.env.INSTANCE or "undefined"
+botInstance = process.env.INSTANCE or "undefined"
 
 module.exports = (robot) ->
 
