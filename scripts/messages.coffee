@@ -2,8 +2,10 @@
 #   Basic scripts that listen for a prompt and return an associated static message
 
 botInstance = process.env.INSTANCE or "undefined"
-
-envToString = process.env.toString()
+envAppName = process.env.HEROKU_APP_NAME or "undefined"
+envSlugCommit = process.env.HEROKU_SLUG_COMMIT or "undefined"
+envRelease = process.env.HEROKU_RELEASE_VERSION or "undefined"
+envTime = process.env.HEROKU_RELEASE_CREATED_AT or "undefined"
 
 module.exports = (robot) ->
 
@@ -27,5 +29,8 @@ module.exports = (robot) ->
 
   robot.respond /who are you/gim, (res) ->
     res.send " > My new model number is: #{botInstance}"
-    res.send " > All env vars - maybe: #{envToString}"
+    res.send " > Heroku app name is: #{envAppName}"
+    res.send " > Heroku slug commit is: #{envSlugCommit}"
+    res.send " > Heroku release is: #{envRelease}"
+    res.send " > Heroku release time is: #{envTime}"
     
