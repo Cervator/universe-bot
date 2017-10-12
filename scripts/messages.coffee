@@ -25,5 +25,5 @@ module.exports = (robot) ->
 
   robot.respond /who are you/gim, (res) ->
     res.send " > My new model number is: #{botInstance}"
-    res.send " > All env vars are: #{process.env}"
+    res.send " > All env vars are: #{process.env}.toString()"
     
