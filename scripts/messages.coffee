@@ -3,6 +3,8 @@
 
 botInstance = process.env.INSTANCE or "undefined"
 
+envToString = process.env.toString()
+
 module.exports = (robot) ->
 
   robot.respond /universe/gim, (res) ->
@@ -25,5 +27,5 @@ module.exports = (robot) ->
 
   robot.respond /who are you/gim, (res) ->
     res.send " > My new model number is: #{botInstance}"
-    res.send " > All env vars - maybe: #{process.env.toString()}"
+    res.send " > All env vars - maybe: #{envToString}"
     
